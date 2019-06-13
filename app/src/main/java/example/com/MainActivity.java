@@ -8,12 +8,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    TextView rollResult;
+    Button rollButton;
 
-    // Holding the score
 
     int score;
 
@@ -39,8 +42,15 @@ public class MainActivity extends AppCompatActivity {
         // Set initial score
         score = 0;
 
+        rollResult = (TextView) findViewById(R.id.rollResult);
+        rollButton = (Button) findViewById(R.id.rollButton);
+
         Toast.makeText(getApplicationContext(), "Application starting!", Toast.LENGTH_SHORT).show();
 
+    }
+
+    public void rolLDice(View v) {
+        rollResult.setText("Cicked!");
     }
 
     @Override
