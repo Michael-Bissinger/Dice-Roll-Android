@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     TextView rollResult;
@@ -19,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     int score;
-
+    Random rand;
 
 
 
@@ -47,10 +49,16 @@ public class MainActivity extends AppCompatActivity {
 
         Toast.makeText(getApplicationContext(), "Application starting!", Toast.LENGTH_SHORT).show();
 
+        rand = new Random();
+
     }
 
-    public void rolLDice(View v) {
+    public void rollDice(View v) {
         rollResult.setText("Cicked!");
+        int num = rand.nextInt(6)+1;
+        String randomValue = "number generated: " + num;
+        Toast.makeText(getApplicationContext(),randomValue,Toast.LENGTH_SHORT).show();
+
     }
 
     @Override
