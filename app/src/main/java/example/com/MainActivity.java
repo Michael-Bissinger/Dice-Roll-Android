@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     int score;
     Random rand;
+    int diel; // Field to hold the die value
 
 
 
@@ -55,9 +56,17 @@ public class MainActivity extends AppCompatActivity {
 
     public void rollDice(View v) {
         rollResult.setText("Cicked!");
-        int num = rand.nextInt(6)+1;
-        String randomValue = "number generated: " + num;
-        Toast.makeText(getApplicationContext(),randomValue,Toast.LENGTH_SHORT).show();
+
+//        Old random gen:
+//        int num = rand.nextInt(6)+1;
+//        String randomValue = "number generated: " + num;
+//        Toast.makeText(getApplicationContext(),randomValue,Toast.LENGTH_SHORT).show();
+
+        diel = rand.nextInt(6)+1;
+
+        String msg = "You rolled a " + diel;
+
+        rollResult.setText(msg);
 
     }
 
