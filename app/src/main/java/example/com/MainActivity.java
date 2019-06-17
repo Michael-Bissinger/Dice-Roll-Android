@@ -64,6 +64,11 @@ public class MainActivity extends AppCompatActivity {
         ImageView die2Image = findViewById(R.id.die2Image);
         ImageView die3Image = findViewById(R.id.die3Image);
 
+        diceImageViews = new ArrayList<ImageView>();
+        diceImageViews.add(die1Image);
+        diceImageViews.add(die2Image);
+        diceImageViews.add(die3Image);
+
     }
 
     public void rollDice(View v) {
