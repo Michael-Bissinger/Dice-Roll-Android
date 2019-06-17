@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     int die3;
 
     ArrayList<Integer> dices; // Array list for all dices
+    ArrayList<ImageView> diceImageViews;
 
 
     @Override
@@ -57,6 +59,10 @@ public class MainActivity extends AppCompatActivity {
         rand = new Random();
 
         dices = new ArrayList<Integer>();
+
+        ImageView die1Image = findViewById(R.id.die1Image);
+        ImageView die2Image = findViewById(R.id.die2Image);
+        ImageView die3Image = findViewById(R.id.die3Image);
 
     }
 
