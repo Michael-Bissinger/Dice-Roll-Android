@@ -95,10 +95,17 @@ public class MainActivity extends AppCompatActivity {
             String imageName = "die_" + dices.get(dieOfSet) + ".png";
 
             try {
+                diceImageViews.get(dieOfSet).setImageDrawable(Drawable.createFromPath(getAssets().open("die_1.png")));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
-                InputStream stream = getAssets().open(imageName);
-                Drawable d = Drawable.createFromStream(stream, null);
-                diceImageViews.get(dieOfSet).setImageDrawable(d);
+
+            try {
+
+            //    InputStream stream = getAssets().open(imageName);
+            //    Drawable d = Drawable.createFromStream(stream, null);
+            //    diceImageViews.get(dieOfSet).setImageDrawable(d);
 
 
             } catch (IOException e) {
