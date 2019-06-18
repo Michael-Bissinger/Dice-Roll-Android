@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     ArrayList<Integer> dices; // Array list for all dices
     ArrayList<ImageView> diceImageViews;
+    TextView scoreText;
 
 
     @Override
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
         rollResult = (TextView) findViewById(R.id.rollResult);
         rollButton = (Button) findViewById(R.id.rollButton);
+        scoreText = findViewById(R.id.scoreText);
 
         Toast.makeText(getApplicationContext(), "Application starting!", Toast.LENGTH_SHORT).show();
 
@@ -71,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
         diceImageViews.add(die1Image);
         diceImageViews.add(die2Image);
         diceImageViews.add(die3Image);
+
+
 
     }
 
