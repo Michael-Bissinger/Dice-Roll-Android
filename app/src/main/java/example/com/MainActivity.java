@@ -113,7 +113,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-        String msg = "You rolled a " + die1 + ", a " + die2 + " and a " + die3;
+        //String msg = "You rolled a " + die1 + ", a " + die2 + " and a " + die3;
+        String msg;
+
+        if (die1 == die2 && die1 == die3) {
+            //triple-score
+            int scoreDelta = die1 * 100;
+            msg = "You rolled a triple " + die1 + "! You score " + scoreDelta + " points!";
+            score += scoreDelta;
+        }
 
         rollResult.setText(msg);
 
