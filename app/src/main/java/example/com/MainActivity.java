@@ -121,6 +121,10 @@ public class MainActivity extends AppCompatActivity {
             int scoreDelta = die1 * 100;
             msg = "You rolled a triple " + die1 + "! You score " + scoreDelta + " points!";
             score += scoreDelta;
+        } else if (die1 == die2 || die1 == die3) {
+            //double-score
+            msg = "You rolled doubles for 50 points!";
+            score += 50;
         }
 
         rollResult.setText(msg);
