@@ -125,9 +125,12 @@ public class MainActivity extends AppCompatActivity {
             //double-score
             msg = "You rolled doubles for 50 points!";
             score += 50;
+        } else {
+            msg = "You didn't score points. Try again! (-:";
         }
 
         rollResult.setText(msg);
+        scoreText.setText("Score: " + score);
 
     }
 
