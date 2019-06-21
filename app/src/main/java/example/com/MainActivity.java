@@ -22,7 +22,6 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
     TextView rollResult;
-    Button rollButton;
 
 
     int score;
